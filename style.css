@@ -1,0 +1,99 @@
+/* =====================
+Buddy “Pig” – Styles
+Palette: warm cream, grass green, spruce, soft tan
+===================== */
+:root{
+--cream: #FFF7EC;
+--tan: #F3E3C3;
+--green: #2E7D32; /* grass accent */
+--mint: #BFE3C2; /* soft highlight */
+--spruce:#0B3D2E; /* deep header text */
+--ink: #263238; /* body text */
+--shadow: 0 10px 20px rgba(11,61,46,0.12);
+--radius-xl: 1.25rem;
+--radius-lg: 1rem;
+--radius-md: .75rem;
+}
+
+
+/* Global */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family:"Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+color:var(--ink);
+background: var(--cream);
+line-height:1.6;
+}
+img{max-width:100%; display:block}
+.container{width:min(1100px, 92%); margin-inline:auto}
+
+
+h1,h2,h3{font-family: Nunito, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--spruce)}
+h1{font-weight:800; font-size: clamp(2rem, 2.5vw + 1rem, 3rem); margin:0 0 .5rem}
+h2{font-weight:800; font-size: clamp(1.4rem, 1.5vw + .8rem, 2rem); margin:0 0 .25rem}
+h3{font-weight:700; font-size: clamp(1.1rem, .8vw + .6rem, 1.35rem); margin:.2rem 0}
+
+
+p{margin:.25rem 0 1rem}
+.muted{opacity:.8}
+
+
+/* Accessibility */
+.skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+.skip-link:focus{left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:white; border-radius:.5rem; box-shadow:var(--shadow)}
+
+
+/* Paw‑print background (subtle) */
+.paw-bg{
+--paw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23BFE3C2' d='M22 27c2-7 8-9 10-9s8 2 10 9c1 4-2 9-10 16C24 36 21 31 22 27z'/%3E%3Cellipse cx='17' cy='22' rx='4' ry='6' fill='%23BFE3C2'/%3E%3Cellipse cx='47' cy='22' rx='4' ry='6' fill='%23BFE3C2'/%3E%3Cellipse cx='26' cy='16' rx='4' ry='4' fill='%23BFE3C2'/%3E%3Cellipse cx='38' cy='16' rx='4' ry='4' fill='%23BFE3C2'/%3E%3C/svg%3E");
+background-image: radial-gradient(circle at 0 0, transparent 0 16px, transparent 16px), var(--paw);
+background-size: 120px 120px, 80px 80px;
+background-repeat: repeat;
+}
+
+
+/* Header */
+.site-header{position:sticky; top:0; z-index:50; background:linear-gradient(180deg, #fff, rgba(255,255,255,.85)); backdrop-filter:saturate(1.2) blur(6px); box-shadow:0 2px 0 rgba(0,0,0,.03)}
+.header-inner{display:grid; align-items:center; grid-template-columns:auto 1fr auto auto; gap:1rem; padding:.75rem 0}
+.logo{display:flex; align-items:center; gap:.5rem; text-decoration:none}
+.logo-paw{font-size:1.4rem}
+.logo-text{font-weight:800; font-size:1.2rem; color:var(--spruce)}
+
+
+/* Search */
+.search{display:flex; align-items:center; gap:.4rem}
+.search input{padding:.55rem .7rem; border:1px solid #dcdcdc; border-radius:999px; background:#fff; min-width:16ch}
+.search button{padding:.5rem .65rem; border:0; border-radius:999px; background:var(--green); color:#fff; cursor:pointer}
+.search button:hover{filter:brightness(1.05)}
+
+
+/* Nav */
+.nav-toggle{display:none}
+.hamburger{display:none; cursor:pointer; padding:.4rem; border-radius:.5rem}
+.hamburger span{display:block; width:24px; height:3px; background:var(--spruce); margin:4px 0; border-radius:2px}
+.primary-nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+.primary-nav a{color:var(--spruce); text-decoration:none; font-weight:700; padding:.4rem .6rem; border-radius:.5rem}
+.primary-nav a:hover{background:var(--mint)}
+
+
+.subnav{border-top:1px solid rgba(0,0,0,.05); background:#fff}
+.subnav .container{display:flex; flex-wrap:wrap; gap:.5rem; padding:.5rem 0 .8rem}
+.chip{display:inline-block; padding:.35rem .7rem; border-radius:999px; background:var(--tan); color:var(--spruce); text-decoration:none; font-weight:700}
+.chip:hover{filter:brightness(1.03)}
+
+
+/* Hero */
+.hero{padding:2.2rem 0}
+.hero-grid{display:grid; grid-template-columns: 1.2fr .9fr; gap:1.2rem; align-items:center}
+.hero .cta-group{display:flex; gap:.6rem; margin-top:.6rem}
+.btn{display:inline-block; text-decoration:none; font-weight:700; padding:.7rem 1rem; border-radius:999px; box-shadow:var(--shadow)}
+.btn.primary{background:var(--green); color:#fff}
+.btn.ghost{background:#fff; color:var(--spruce); border:1px solid #dfe5df}
+.btn:hover{transform:translateY(-1px)}
+
+
+.media-card{overflow:hidden; border-radius: var(--radius-xl); box-shadow: var(--shadow); background:#fff}
+.media-card figcaption{padding:.6rem .8rem; font-weight:600; display:flex; justify-content:space-between; align-items:center}
+}
