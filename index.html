@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<figure class="gallery-item">
+<img src="https://source.unsplash.com/900x700/?black-labrador,forest" alt="Black lab in the forest" />
+<figcaption><button class="chip" onclick="location.href='#personality'">Explorer mode</button></figcaption>
+</figure>
+<figure class="gallery-item">
+<img src="https://source.unsplash.com/900x700/?black-labrador,portrait" alt="Black lab portrait" />
+<figcaption><button class="chip" onclick="location.href='#about'">About Buddy</button></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+
+<!-- PERSONALITY -->
+<section id="personality" class="section alt green">
+<div class="container">
+<h2>Personality</h2>
+<div class="cards">
+<article class="card">
+<h3>Gentle & Loving</h3>
+<p>He greets everyone with a wag and brings out the best in people.</p>
+</article>
+<article class="card">
+<h3>Brave through sickness</h3>
+<p>Even when he’s not feeling well, he’s patient and resilient.</p>
+</article>
+<article class="card">
+<h3>Adventure Buddy</h3>
+<p>From beaches to forests, he’s always ready to explore.</p>
+</article>
+<article class="card">
+<h3>Goofy “Pig” Oinks</h3>
+<p>When excited, he makes the cutest little oinks—pure joy.</p>
+</article>
+</div>
+</div>
+</section>
+
+
+<!-- LINKS / FOOTER -->
+<section id="links" class="section">
+<div class="container">
+<h2>Follow Buddy</h2>
+<p>Find more of Buddy’s adventures here:</p>
+<div class="link-grid">
+<a class="link-card" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+<a class="link-card" href="#" target="_blank" rel="noopener">TikTok</a>
+<a class="link-card" href="#" target="_blank" rel="noopener">Photo Album</a>
+</div>
+</div>
+</section>
+</main>
+
+
+<footer class="site-footer" role="contentinfo">
+<div class="container footer-inner">
+<p>Made with love for Buddy “Pig”. © <span id="year"></span></p>
+<nav aria-label="Footer">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#personality">Personality</a>
+</nav>
+</div>
+<script>
+// tiny progressive enhancement: update year (keeps page valid without JS)
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</footer>
+</body>
+</html>
